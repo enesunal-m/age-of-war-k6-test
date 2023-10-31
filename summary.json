@@ -1,0 +1,110 @@
+{
+  "options": {
+    "summaryTrendStats": [
+      "avg",
+      "min",
+      "med",
+      "max",
+      "p(90)",
+      "p(95)"
+    ],
+    "summaryTimeUnit": "",
+    "noColor": false
+  },
+  "state": {
+    "isStdOutTTY": true,
+    "isStdErrTTY": true,
+    "testRunDurationMs": 40085.957
+  },
+  "metrics": {
+    "attack_latency": {
+      "type": "trend",
+      "contains": "default",
+      "values": {
+        "med": 129,
+        "max": 635,
+        "p(90)": 227,
+        "p(95)": 293,
+        "avg": 139.13835466649513,
+        "min": 49
+      }
+    },
+    "ws_sessions": {
+      "type": "counter",
+      "contains": "default",
+      "values": {
+        "count": 400,
+        "rate": 9.978556829764598
+      }
+    },
+    "ws_connecting": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "p(95)": 1222.5400673000001,
+        "avg": 393.55258177250005,
+        "min": 170.787541,
+        "med": 225.9935415,
+        "max": 1295.734375,
+        "p(90)": 1023.0868375000003
+      }
+    },
+    "ws_msgs_received": {
+      "type": "counter",
+      "contains": "default",
+      "values": {
+        "count": 16747,
+        "rate": 417.7772280701693
+      }
+    },
+    "vus": {
+      "type": "gauge",
+      "contains": "default",
+      "values": {
+        "value": 20,
+        "min": 20,
+        "max": 20
+      }
+    },
+    "ws_msgs_sent": {
+      "values": {
+        "count": 16759,
+        "rate": 418.07658477506226
+      },
+      "type": "counter",
+      "contains": "default"
+    },
+    "data_received": {
+      "type": "counter",
+      "contains": "data",
+      "values": {
+        "count": 1940177,
+        "rate": 48400.41613575547
+      }
+    },
+    "vus_max": {
+      "type": "gauge",
+      "contains": "default",
+      "values": {
+        "value": 20,
+        "min": 20,
+        "max": 20
+      }
+    },
+    "data_sent": {
+      "contains": "data",
+      "values": {
+        "count": 4688284,
+        "rate": 116955.77082019023
+      },
+      "type": "counter"
+    }
+  },
+  "root_group": {
+    "id": "d41d8cd98f00b204e9800998ecf8427e",
+    "groups": [],
+    "checks": [],
+    "name": "",
+    "path": ""
+  }
+}

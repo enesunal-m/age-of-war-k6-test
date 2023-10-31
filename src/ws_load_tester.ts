@@ -1,8 +1,9 @@
 import http from 'k6/http';
-import { EventName, ReadyState, WebSocket } from 'k6/experimental/websockets';
-import { setTimeout, clearTimeout, setInterval, clearInterval } from 'k6/experimental/timers';
+import { WebSocket } from 'k6/experimental/websockets';
+import { setTimeout, setInterval, clearInterval } from 'k6/experimental/timers';
 import { Trend } from 'k6/metrics';
-import { sleep, check } from 'k6';
+import { check } from 'k6';
+import { textSummary } from 'https://jslib.k6.io/k6-summary/0.0.1/index.js';
 
 export let options = {
     vus: 20, // 50 virtual users
@@ -134,6 +135,16 @@ function startWSWorker() {
         if (e?.error != "websocket: close sent") {
             console.log('An unexpected error occurred: ', e?.error);
         }
+    };
+}
+
+export function handleSummary(data: any) {
+    console.log('Finished executing performance tests');
+
+    return {
+        'stdout': textSummary(data, { indent: ' ', enableColors: true }), // Show the text summary to stdout...
+        'summary.txt': textSummary(data, { indent: ' ' }),
+        'summary.json': JSON.stringify(data, null, 2),
     };
 }
 
