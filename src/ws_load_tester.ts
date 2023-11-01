@@ -7,7 +7,7 @@ import { textSummary } from 'https://jslib.k6.io/k6-summary/0.0.1/index.js';
 
 export let options = {
     vus: 50, // 50 virtual users
-    duration: '10s', // run the test for 2 minutes
+    duration: '60s', // run the test for 2 minutes
 };
 
 const workerCount = 10;
