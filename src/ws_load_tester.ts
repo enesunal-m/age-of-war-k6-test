@@ -13,6 +13,7 @@ export let options = {
 const workerCount = 10;
 
 let localUrl = 'localhost:8080';
+
 let prodUrl = '167.172.105.111';
 
 let hostUrl = "";
